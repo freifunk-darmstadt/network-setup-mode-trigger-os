@@ -43,6 +43,13 @@
     #####################################################################
   '';
 
+  programs.ssh.extraConfig = ''
+    Host 192.168.0.1 192.168.1.1 192.168.8.1 192.168.88.1 192.168.1.254 192.168.1.20 fdc3:67ce:cc7e:9001::1:1 fdc3:67ce:cc7e:9040::1:1 fd01:67c:2ed8:10*::1:1
+      StrictHostKeyChecking no
+      UserKnownHostsFile /dev/null
+      LogLevel QUIET
+  '';
+
   systemd.network = {
     networks = {
       "99-default" = {
