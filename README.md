@@ -11,7 +11,7 @@
 6. connect your AP to the powered side of the PoE Injector, wait a few seconds
 7. press Ctrl+C to abort sending the packages
 8. (optional) after a while you should be able to ssh into your device with `ssh root@192.168.1.1`. You can terminate the connection with `exit`
-9. type "systemctl poweroff" to turn your PC off
+9. type "sudo systemctl poweroff" to turn your PC off
 10. remove the USB stick and start your PC as you normaly would
 11. until the AP loses power it's in the Setup/Config Mode and can be accessed as any other Freifunk Router via 192.168.1.1
 
