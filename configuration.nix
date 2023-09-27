@@ -3,6 +3,8 @@
 {
   #isoImage.squashfsCompression = "gzip -Xcompression-level 1";
 
+  boot.kernelParams = [ "net.ifnames=0" ];
+
   services.openssh.enable = lib.mkForce false;
   services.openssh.settings.PermitRootLogin = lib.mkForce "prohibit-password";
 
@@ -29,14 +31,14 @@
 
   networking = {
     useNetworkd = true;
-    usePredictableInterfaceNames = true;
+    usePredictableInterfaceNames = false;
     useDHCP = false;
   };
 
   services.getty.helpLine = lib.mkForce ''
     #####################################################################
     #                                                                   #
-    # Run `sudo send-network-request enp1s0` to start sending requests. #
+    # Run `sudo send-network-request eth0` to start sending requests. #
     #                                                                   #
     #####################################################################
   '';
