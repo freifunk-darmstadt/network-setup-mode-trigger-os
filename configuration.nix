@@ -48,6 +48,10 @@
       StrictHostKeyChecking no
       UserKnownHostsFile /dev/null
       LogLevel QUIET
+
+    Host *
+      LogLevel ERROR
+      User root
   '';
 
   systemd.network = {
