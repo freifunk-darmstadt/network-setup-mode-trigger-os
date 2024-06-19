@@ -3,7 +3,7 @@
 
 ## Usage
 
-1. Downaload the provided ISO
+1. [Downaload](https://github.com/freifunk-darmstadt/network-setup-mode-trigger-os/releases/latest) the provided ISO
 2. Copy it onto an USB Stick (for example https://etcher.balena.io/ could be used)
 3. Interrupt your normal Boot and instead boot from the USB
 4. once booted type `sudo send-network-request eth0` to start sending the reset packages on the specified interface
